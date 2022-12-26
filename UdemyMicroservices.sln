@@ -32,6 +32,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeCourse.Services.Basket"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{41737856-1863-446E-9F97-0E79E9DFE310}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeCourse.Services.Discount", "Services\Discount\FreeCourse.Services.Discount\FreeCourse.Services.Discount.csproj", "{F3EAFE16-EC00-40BF-ABDC-5B7E7E8B2D15}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,10 @@ Global
 		{5580462C-10C6-4DFD-A45B-8F0F01CB1BA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5580462C-10C6-4DFD-A45B-8F0F01CB1BA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5580462C-10C6-4DFD-A45B-8F0F01CB1BA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3EAFE16-EC00-40BF-ABDC-5B7E7E8B2D15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3EAFE16-EC00-40BF-ABDC-5B7E7E8B2D15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3EAFE16-EC00-40BF-ABDC-5B7E7E8B2D15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3EAFE16-EC00-40BF-ABDC-5B7E7E8B2D15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +78,7 @@ Global
 		{565DBF73-4802-4C50-9CF2-7F535FE409A9} = {18A96B71-E4D4-443A-8EDD-45CAD14526C4}
 		{5580462C-10C6-4DFD-A45B-8F0F01CB1BA7} = {565DBF73-4802-4C50-9CF2-7F535FE409A9}
 		{41737856-1863-446E-9F97-0E79E9DFE310} = {18A96B71-E4D4-443A-8EDD-45CAD14526C4}
+		{F3EAFE16-EC00-40BF-ABDC-5B7E7E8B2D15} = {41737856-1863-446E-9F97-0E79E9DFE310}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {33002160-90B6-42F4-965B-60D41F76EEA6}
