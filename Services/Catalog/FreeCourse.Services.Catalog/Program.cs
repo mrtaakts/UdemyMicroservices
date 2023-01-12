@@ -1,3 +1,5 @@
+using FreeCourse.Services.Catalog.Dtos;
+using FreeCourse.Services.Catalog.Models;
 using FreeCourse.Services.Catalog.Services;
 using FreeCourse.Services.Catalog.Settings;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -5,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
+
 
 // Add services to the container.
 
@@ -37,6 +40,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 
 var app = builder.Build();
 
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -46,7 +50,21 @@ if (app.Environment.IsDevelopment())
 
 app.UseAuthorization();
 app.UseAuthentication();
-
+SeedDatabase();
 app.MapControllers();
 
 app.Run();
+
+void SeedDatabase() //can be placed at the very bottom under app.Run()
+{
+    using (var scope = app.Services.CreateScope())
+    {
+        var serviceProvider = scope.ServiceProvider;
+        var categoryService = serviceProvider.GetRequiredService<ICategoryService>();
+        if (categoryService.GetAllAsync().Result.Data.Count < 2)
+        {
+            categoryService.CreateAsync(new CategoryDto { Name = "Asp.net Core Kursu" }).Wait();
+            categoryService.CreateAsync(new CategoryDto { Name = "Asp.net Core API Kursu" }).Wait();
+        }
+    }
+}
